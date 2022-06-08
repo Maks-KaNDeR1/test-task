@@ -1,10 +1,10 @@
-import { Dispatch } from "redux";
+import { AppThunkType } from './store';
 import { todosAPI, TodosType } from "../api/api";
 
 const initialState: TodosType[] = []
 
 
-export const todosReducer = (state: TodosType[] = initialState, action: ActionsType): TodosType[] => {
+export const todosReducer = (state: TodosType[] = initialState, action: TodosActionsType): TodosType[] => {
   switch (action.type) {
     case 'REMOVE-TODOS':
       return state.filter(tl => tl.id !== action.id)
@@ -27,7 +27,7 @@ export const removeTodos = (id: number) => ({ type: 'REMOVE-TODOS', id } as cons
 export const setTodos = (todos: TodosType[]) => ({ type: 'SET-TODOS', todos } as const)
 
 
-export const fetchTodos = () => (dispatch: Dispatch) => {
+export const fetchTodos = ():AppThunkType => (dispatch) => {
   todosAPI.getTodos()
     .then((res) => {
       dispatch(setTodos(res.data))
@@ -38,7 +38,7 @@ export const fetchTodos = () => (dispatch: Dispatch) => {
 type RemoveTodosActionType = ReturnType<typeof removeTodos>
 type SetTodosActionType = ReturnType<typeof setTodos>
 
-type ActionsType =
+export type TodosActionsType =
   | SetTodosActionType
   | RemoveTodosActionType
   | ReturnType<typeof changeTodosTitle>
