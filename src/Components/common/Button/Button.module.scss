@@ -1,0 +1,15 @@
+.button {
+  border-radius: 3px;
+  letter-spacing: .0892857143em;
+  text-decoration: none;
+  text-indent: 0.0892857143em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.4s;
+
+}
+
+:disabled {
+  opacity: 0.5;
+}
+

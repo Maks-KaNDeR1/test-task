@@ -1,0 +1,39 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container {
+    text-align: center;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    .select {
+        .selectTrigger {
+            position: relative;
+            width: 150px;
+            border: none;
+            text-decoration: none;
+            letter-spacing: .0892857143em;
+            text-indent: 0.0892857143em;
+            text-transform: uppercase;
+            background-color: rgb(50 158 244);
+            border-radius: 2px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .selectDropdown {
+            position: absolute;
+            width: 150px;
+            .selectItems {
+                border: 1px solid rgb(234, 236, 255);
+                border-radius: 5px;
+                background-color: #fff;
+                :hover {
+                    background-color: rgb(50 158 244);
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
