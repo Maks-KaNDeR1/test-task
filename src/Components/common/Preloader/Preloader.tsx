@@ -1,12 +1,11 @@
-import styles from './Preloader.module.css'
+import styles from './Preloader.module.scss'
 
 
-const Preloader = () => {
+export const Preloader = () => {
     return (
-        <div className={styles.ldsspinner} ><div></div><div></div><div></div>
+        <div className={styles.ldsspinner}   ><div></div><div></div><div></div>
             <div></div><div></div><div></div><div></div><div></div>
             <div></div><div></div><div> </div><div></div></div>
     )
 }
 
-export default Preloader;

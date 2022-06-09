@@ -29,7 +29,7 @@ export const initializedSuccess = () => ({ type: 'INITIALIZED_SUCCESS' } as cons
 export const initializeApp = ():AppThunkType => async (dispatch) => {
     let promise = dispatch(fetchTodos())
     Promise.all([promise])
-    dispatch(initializedSuccess())
+        dispatch(initializedSuccess())
 }
 
 type InitializedSuccessType = ReturnType<typeof initializedSuccess>

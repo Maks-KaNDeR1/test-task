@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { AppRootStateType } from './store/store';
 import { useDispatch } from 'react-redux';
 import { initializeApp } from './store/app-reducer';
-import Preloader from './Components/common/Preloader/Preloader';
+import { Preloader } from './Components/common/Preloader/Preloader';
 
 
 
